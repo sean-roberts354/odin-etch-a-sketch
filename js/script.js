@@ -34,6 +34,15 @@ function generateSketchPad(length, width) {
       sketchPad.style.gridTemplateRows=`repeat(${width}, auto)`;
 }
 
+function changePaintColor(clicked) {
+      let colors = document.querySelectorAll(".color");
+      colors.forEach((color) => {
+            color.classList.remove("active");
+      })
+
+      clicked.classList.add("active");
+}
+
 function getPaintColor() {
       return document.querySelector(".active").style.backgroundColor;
 }
@@ -60,6 +69,12 @@ document.querySelector("#generate-sketch-pad").addEventListener("click", () => {
       } else {
             generateSketchPad(length, width);
       }
+});
+
+document.querySelectorAll(".color").forEach((color) => {
+      color.addEventListener("click", (e) => {
+            changePaintColor(e.target);
+      })
 });
 
 document.querySelector("#clear-sketch-pad").addEventListener("click", clearSketchPad);

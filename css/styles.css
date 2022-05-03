@@ -160,6 +160,7 @@ main {
       height: 20px;
       aspect-ratio: 1;
       border-radius: 50%;
+      cursor: pointer;
 }
 
 .color-option div.active {
