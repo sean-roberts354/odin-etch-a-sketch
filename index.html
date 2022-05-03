@@ -27,14 +27,18 @@
                   <div class="app-controls">
                         <p>Set Size (px)</p>
                         <div class="size-input">
-                              <span>Length: </span><input type="text">
-                              <span>Width: </span><input type="text">
+                              <div><span>Length: </span><input type="text"></div>
+                              <div><span>Width: </span><input type="text"></div>
                         </div>
                         <p>Pick Color</p>
                         <div class="color-input">
                               <div class="color-option">
-                                    <div id="black"></div>
-                                    <p>Black</p>
+                                    <div class="active" id="black" style="background-color: black;"></div>
+                                    <span>Black</span>
+                              </div>
+                              <div class="color-option">
+                                    <div id="blue" style="background-color: blue;"></div>
+                                    <span>Blue</span>
                               </div>
                         </div>
                         <button type="button">Generate Sketch Pad</button>
