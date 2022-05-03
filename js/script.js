@@ -18,12 +18,30 @@ function generateSketchPad(length, width) {
       for (let i = 0; i < area; i++) {
             let sketchPadBox = document.createElement("div");
             sketchPadBox.classList.add("sketch-pad-box");
+            sketchPadBox.setAttribute.draggable = "false";
+            sketchPadBox.addEventListener("mousemove", (e) => {
+                  if (e.buttons == 0) {
+                        return;
+                  } else if (e.buttons == 1) {
+                        let color = getPaintColor();
+                        drawInBox(e.target, color);
+                  }
+            });
             sketchPad.appendChild(sketchPadBox);
       }
 
       sketchPad.style.gridTemplateColumns=`repeat(${length}, auto`;
       sketchPad.style.gridTemplateRows=`repeat(${width}, auto)`;
 }
+
+function getPaintColor() {
+      return document.querySelector(".active").style.backgroundColor;
+}
+
+function drawInBox(box, color) {
+      box.style.backgroundColor = color;
+}
+
 
 document.querySelector("#generate-sketch-pad").addEventListener("click", () => {
       let length = (parseInt(document.querySelector("#input-length").value)) / 10;
