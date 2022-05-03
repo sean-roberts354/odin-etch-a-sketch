@@ -75,4 +75,57 @@ select {
 
 body {
       font-family: 'Montserrat', sans-serif;
+      background-color: hsl(0, 0%, 96%);
+}
+
+header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding-block: 2rem;
+      background-color: hsl(0, 0%, 90%);
+}
+
+footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding-block: 1rem;
+      background-color: hsl(0, 0%, 90%);
+}
+
+footer a{
+      text-decoration: none;
+      color: inherit;
+}
+
+main {
+}
+
+.left {
+
+}
+
+.right {
+
+}
+
+.app-controls {
+
+}
+
+
+
+.sketch-pad {
+
+}
+
+.sketch-pad-box {
+      height: 50px;
+      width: 50px;
+      border: solid black 1px;
 }
