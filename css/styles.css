@@ -76,12 +76,13 @@ select {
 body {
       font-family: 'Montserrat', sans-serif;
       background-color: hsl(0, 0%, 96%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
 }
 
 header {
-      position: fixed;
-      top: 0;
-      left: 0;
       width: 100%;
       text-align: center;
       padding-block: 2rem;
@@ -89,9 +90,6 @@ header {
 }
 
 footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
       width: 100%;
       text-align: center;
       padding-block: 1rem;
@@ -104,24 +102,35 @@ footer a{
 }
 
 main {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
 }
 
 .left {
-
+      flex-basis: 25vw;
+      padding-inline: 1rem;
+      margin-block: auto;
 }
 
 .right {
-
+      flex-basis: 75vw;
+      padding-inline: 1rem;
+      margin-block: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 
 .app-controls {
+      display: flex;
+      flex-direction: column;
 
 }
 
 
 
 .sketch-pad {
-
 }
 
 .sketch-pad-box {
