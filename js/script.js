@@ -97,3 +97,5 @@ document.querySelectorAll(".color").forEach((color) => {
 });
 
 document.querySelector("#clear-sketch-pad").addEventListener("click", clearSketchPad);
+
+document.querySelector("#reset").addEventListener("click", reset);
