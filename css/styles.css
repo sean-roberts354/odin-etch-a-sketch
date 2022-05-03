@@ -170,10 +170,11 @@ main {
 
 
 .sketch-pad {
+      display: grid;
+      border: 1px solid black;
 }
 
 .sketch-pad-box {
       height: 50px;
-      width: 50px;
-      border: solid black 1px;
+      aspect-ratio: 1;
 }
