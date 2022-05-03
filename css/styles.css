@@ -167,7 +167,13 @@ main {
       outline: solid 2px black;
 }
 
-
+.instructions {
+      font-size: 1rem;
+      background-color:hsl(0, 0%, 90%);
+      border-radius: 5px;
+      padding: 1.5rem 1rem;
+      margin-inline: 2rem;
+}
 
 .sketch-pad {
       display: grid;
@@ -175,6 +181,6 @@ main {
 }
 
 .sketch-pad-box {
-      height: 50px;
+      height: 10px;
       aspect-ratio: 1;
 }

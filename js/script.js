@@ -12,6 +12,8 @@ function generateSketchPad(length, width) {
       let area = length * width;
 
       let sketchPad = document.querySelector(".sketch-pad");
+      sketchPad.style.visibility="visible";
+      document.querySelector(".instructions").style.display="none";
 
       for (let i = 0; i < area; i++) {
             let sketchPadBox = document.createElement("div");
@@ -24,16 +26,13 @@ function generateSketchPad(length, width) {
 }
 
 document.querySelector("#generate-sketch-pad").addEventListener("click", () => {
-      let length = parseInt(document.querySelector("#input-length").value);
-      let width = parseInt(document.querySelector("#input-width").value);
+      let length = (parseInt(document.querySelector("#input-length").value)) / 10;
+      let width = (parseInt(document.querySelector("#input-width").value)) / 10;
 
       if (isNaN(length) || isNaN(width)) {
             alert("You must enter a number for length and width");
             return;
       } else {
             generateSketchPad(length, width);
-      }      
-
-      console.log(length);
-      console.log(width);
-})
+      }
+});
