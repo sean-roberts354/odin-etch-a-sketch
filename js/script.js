@@ -43,7 +43,10 @@ function drawInBox(box, color) {
 }
 
 function clearSketchPad() {
-
+      let sketchPadBoxes = document.querySelectorAll(".sketch-pad-box");
+      sketchPadBoxes.forEach((box) => {
+            box.style.backgroundColor = "inherit";
+      })
 }
 
 
@@ -58,3 +61,5 @@ document.querySelector("#generate-sketch-pad").addEventListener("click", () => {
             generateSketchPad(length, width);
       }
 });
+
+document.querySelector("#clear-sketch-pad").addEventListener("click", clearSketchPad);
