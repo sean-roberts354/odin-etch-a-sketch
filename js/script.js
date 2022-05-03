@@ -32,6 +32,17 @@ function generateSketchPad(length, width) {
 
       sketchPad.style.gridTemplateColumns=`repeat(${length}, auto`;
       sketchPad.style.gridTemplateRows=`repeat(${width}, auto)`;
+
+      if (isOverflown()) {
+            if(confirm("You're sketch pad is too large for your screen. Would you like to continue anyway?") == false) {
+                  reset();
+            }
+      }
+}
+
+function isOverflown() {
+      let body = document.querySelector("body");
+      return body.scrollHeight > body.clientHeight || body.scrollWidth > body.clientWidth;
 }
 
 function changePaintColor(clicked) {
@@ -56,6 +67,14 @@ function clearSketchPad() {
       sketchPadBoxes.forEach((box) => {
             box.style.backgroundColor = "inherit";
       })
+}
+
+function reset() {
+      generateSketchPad(0, 0);
+      document.querySelector(".sketch-pad").style.visibility = "hidden";
+      document.querySelector(".instructions").style.display = "block";
+      document.querySelector("#input-length").value = "";
+      document.querySelector("#input-width").value = "";
 }
 
 
