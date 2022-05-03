@@ -18,7 +18,7 @@ function generateSketchPad(length, width) {
       for (let i = 0; i < area; i++) {
             let sketchPadBox = document.createElement("div");
             sketchPadBox.classList.add("sketch-pad-box");
-            sketchPadBox.setAttribute.draggable = "false";
+            sketchPadBox.setAttribute("draggable", "false");
             sketchPadBox.addEventListener("mousemove", (e) => {
                   if (e.buttons == 0) {
                         return;
@@ -40,6 +40,10 @@ function getPaintColor() {
 
 function drawInBox(box, color) {
       box.style.backgroundColor = color;
+}
+
+function clearSketchPad() {
+
 }
 
 
