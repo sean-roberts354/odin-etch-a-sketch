@@ -108,13 +108,13 @@ main {
 }
 
 .left {
-      flex-basis: 25vw;
+      flex-basis: 30vw;
       padding-inline: 1rem;
       margin-block: auto;
 }
 
 .right {
-      flex-basis: 75vw;
+      flex-basis: 70vw;
       padding-inline: 1rem;
       margin-block: auto;
       display: flex;
@@ -125,7 +125,46 @@ main {
 .app-controls {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      gap: 1rem;
 
+}
+
+.app-controls p {
+      border-bottom: 1px solid black;
+}
+
+.size-input {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+}
+
+.size-input input {
+      width: 4rem;
+      text-align: center;
+}
+
+.color-input {
+      display: flex;
+      gap: 1rem;
+}
+
+.color-option {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.color-option div {
+      height: 20px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+}
+
+.color-option div.active {
+      border: solid 1px white;
+      outline: solid 2px black;
 }
 
 
